@@ -19,14 +19,30 @@ function game(button) {
     } else {
         computerSelection = 'Scissiors';
     }
-    console.log(playerSelection,computerSelection);
-    let result = checkWinner(playerSelection,computerSelection);
+    console.log(playerSelection, computerSelection);
+    let result = checkWinner(playerSelection, computerSelection);
     console.log(result);
     
+
+
 }
 
-function checkWinner(pl,cp){
-    if (pl===cp) {
+function checkWinner(pl, cp) {
+    if (pl === cp) {
         return 'Draw';
+    }
+    if (pl === 'Rock') {
+        if (cp === 'Paper') {
+            return 'Computer';
+        }else{
+            return 'Player';
+        }
+    }
+    if (pl === 'Paper') {
+        if (cp === 'Scissiors') {
+            return 'Computer';
+        }else{
+            return 'Player';
+        }
     }
 }
