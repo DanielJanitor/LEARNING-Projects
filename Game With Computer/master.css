@@ -1,0 +1,67 @@
+body {
+  background: #2c3e50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.container {
+  background-color: #fff;
+  flex: 0 0 50%;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.message {
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 0rem;
+}
+
+.messageVisible {
+  visibility: visible;
+}
+
+.result {
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+  visibility: hidden;
+}
+
+.resultVisible {
+  visibility: visible;
+}
+
+.finalScore {
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  padding: 0 0 1rem 0;
+}
+
+.finalScoreVisible {
+  visibility: visible;
+}
+
+.endGame {
+  display: none;
+}
+
+.EndMessage {
+  display: none;
+
+}
+
+.EndMessageDisplay {
+  background-color: #fff;
+  display: block;
+  flex: 0 0 50%;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+}
