@@ -22,7 +22,7 @@ function game(button) {
     console.log(playerSelection, computerSelection);
     let result = checkWinner(playerSelection, computerSelection);
     console.log(result);
-    
+
 
 
 }
@@ -34,14 +34,14 @@ function checkWinner(pl, cp) {
     if (pl === 'Rock') {
         if (cp === 'Paper') {
             return 'Computer';
-        }else{
+        } else {
             return 'Player';
         }
     }
     if (pl === 'Paper') {
         if (cp === 'Scissiors') {
             return 'Computer';
-        }else{
+        } else {
             return 'Player';
         }
     }
