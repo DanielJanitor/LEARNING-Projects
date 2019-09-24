@@ -7,7 +7,7 @@ const EndResult = document.querySelector('.EndResult');
 const array = ['Head', 'Tail'];
 const status = ['Player Won Game','Computer Won Game'];
 const winner = document.querySelector('.Winner');
-
+var preco
 
 let finalScore = document.querySelector('.finalScore');
 let score = [0, 0];
