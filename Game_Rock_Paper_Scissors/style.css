@@ -10,4 +10,8 @@ body {
     background: #fff;
     padding: 2rem;
     border-radius: 5px;
+    text-align: center;
+}
+.message{
+    padding: 1rem;
 }
