@@ -32,12 +32,9 @@ btn.addEventListener('click', function () {
         let total = ((endTime - startTime) / 1000);
         console.log(total);
         let str = playText.value;
-    }
-
-    function wordCounter(){
+        console.log(str);
         
     }
 
 
-
-})
+});
