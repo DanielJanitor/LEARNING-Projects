@@ -5,8 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
     myBlock = document.createElement('div');
     myBlock.textContent = 'hello world';
     document.body.appendChild(myBlock);
-    myFunctionList.document.createElement('div');
-    document.body.appendChild(myFunctionList);
+    
 
 
     myBlock.style.width = '100px';
