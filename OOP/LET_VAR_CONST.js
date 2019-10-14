@@ -6,10 +6,10 @@
 //VAR variable
 
 function sayHello0() {
-    for (var x = 0; x < 5; x++){
+    for (var x = 0; x < 5; x++) {
         console.log(x);
     }
-    console.log(x);   
+    console.log(x);
 }
 
 
@@ -19,6 +19,14 @@ function sayHello1() {
         console.log(i);
     }
 }
+
+
+// CONST variable
+const string = 'Hello';
+console.log(string);
+// const variable can not be reasigned
+
+
 
 sayHello0();
 sayHello1();
