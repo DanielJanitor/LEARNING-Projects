@@ -81,7 +81,7 @@ const sortedCompaniesOld = Companies.sort(function (c1, c2) {
     if (c1.empoyes > c2.empoyes) {
         return 1;
     } else {
-        return -1;
+        return -1; 
     }
 })
 console.log(sortedCompaniesOld);
