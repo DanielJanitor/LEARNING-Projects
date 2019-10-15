@@ -25,11 +25,30 @@ console.log(houseLocation('Zamutov'));
 
 
 //Methods with arrow functions filter / map / reduce / sort
-const Companies = [
-    {name: 'IBM',empoyes: 2000,location: 'Berlin',category: 'IT'},
-    {name: 'AT&T',empoyes: 150,location: 'Kosice',category: 'Retail'},
-    {name: 'T-Systems',empoyes: 1500,location: 'Bratislava',category: 'IT'},
-    {name: 'NESS',empoyes: 3500,location: 'Bon',category: 'Finance'},
+const Companies = [{
+        name: 'IBM',
+        empoyes: 2000,
+        location: 'Berlin',
+        category: 'IT'
+    },
+    {
+        name: 'AT&T',
+        empoyes: 150,
+        location: 'Kosice',
+        category: 'Retail'
+    },
+    {
+        name: 'T-Systems',
+        empoyes: 1500,
+        location: 'Bratislava',
+        category: 'IT'
+    },
+    {
+        name: 'NESS',
+        empoyes: 3500,
+        location: 'Bon',
+        category: 'Finance'
+    },
 ];
 
 const ages = [15, 25, 84, 78, 68, 47, 54, 1, 25, 47, 6, 19, 47, 58, ];
@@ -81,11 +100,42 @@ const sortedCompaniesOld = Companies.sort(function (c1, c2) {
     if (c1.empoyes > c2.empoyes) {
         return 1;
     } else {
-        return -1; 
+        return -1;
     }
 })
-console.log(sortedCompaniesOld);
+// console.log(sortedCompaniesOld);
 
 //Arrow function
 const sortedComanies = Companies.sort(company => company.empoyes);
-console.log(sortedComanies);
+// console.log(sortedComanies);
+
+//05. REDUCE
+//old way
+let ageSum = 0;
+for (let i = 0; i < ages.length; i++) {
+    ageSum += ages[i];
+}
+// console.log(ageSum);
+//ES6
+ageSum = ages.reduce(function (total, age) {
+    return total + age;
+})
+//Arrow function
+ageSum = ages.reduce((total, age) => total + age, 0);
+// console.log(ageSum);
+
+
+//get total years of empoyes
+
+const empoyesCompanies = Companies.reduce((total, empoyes) => total + empoyes.empoyes, 0);
+// console.log(empoyesCompanies);
+
+// Combine methods
+
+const combine = ages
+    .map(age => age * 2)
+    .filter(age => age => 40)
+    .sort((a, b) => a - b)
+    .reduce((a, b) => a + b, 0)
+
+console.log(combine);
