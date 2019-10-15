@@ -139,3 +139,98 @@ const combine = ages
     .reduce((a, b) => a + b, 0)
 
 console.log(combine);
+
+const houses = [{
+        id: 1,
+        isBuild: true
+    },
+    {
+        id: 1,
+        isBuild: true
+    },
+    {
+        id: 1,
+        isBuild: false
+    }
+];
+
+console.log(houses);
+
+const buildedHouses = houses.filter(function (house) {
+    return house.isBuild;
+})
+
+console.log(buildedHouses);
+
+
+//Arrow function with This
+
+const person = {
+    talk() {
+        setTimeout(() => {
+            console.log('this', this);
+        }, 3000);
+
+    }
+}
+
+// person.talk();
+
+
+//Arrow function with MAP
+
+const colors = ['red', 'orange', 'blue'];
+const selected = colors.map(color => `<li>${color}</li>`);
+console.log(selected);
+
+
+//Object Descructuring
+
+const generalObject = {
+    street: '',
+    city: '',
+    country: ''
+};
+
+//old way
+// const street = generalObject.street;
+// const city = generalObject.city;
+// const country = generalObject.country;
+
+const {
+    street,
+    city,
+    country
+} = generalObject;
+console.log(generalObject);
+
+//Spred operators
+
+const firstArray = [1, 2, 3];
+const secondArray = [4, 5, 6];
+
+//old way
+const combineArrays = firstArray.concat(secondArray);
+console.log(combineArrays);
+//ES6 way
+const combineEs6 = [...firstArray, ' and ', ...secondArray];
+console.log(combineEs6);
+const cloneFirst = [...firstArray]
+console.log(cloneFirst);
+
+const info1 = {
+    name: 'Daniel'
+};
+const info2 = {
+    age: 34
+};
+
+const info3 = {
+    ...info1,
+    ...info2,
+    location: 'Slovakia'
+};
+
+console.log(info3);
+
+
